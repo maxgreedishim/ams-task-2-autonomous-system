@@ -1,7 +1,11 @@
 node_modules/
 .next/
+.next-docker/
 dist/
 data/*.sqlite
+**/data/*.sqlite
+*.tsbuildinfo
+.idea/
 .env
 .env.local
 *.log
