@@ -1,0 +1,29 @@
+{
+  "name": "ams-task-2-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch index.ts",
+    "start": "tsx index.ts",
+    "lint": "eslint . --ignore-pattern node_modules",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/**/*.test.ts"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^8.42.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.0",
+    "eslint": "^9.35.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.9.2",
+    "@types/sequelize": "^4.28.20"
+  }
+}

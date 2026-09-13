@@ -1,0 +1,15 @@
+{
+  "name": "ams-task-2-autonomous-system",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "lint": "npm --prefix client run lint && npm --prefix server run lint",
+    "typecheck": "npm --prefix client run build && npm --prefix server run typecheck",
+    "test": "npm run fsd:check && npm run typecheck && npm --prefix server test",
+    "fsd:check": "npm --prefix client run fsd:check",
+    "verify": "npm run lint && npm test && docker compose config"
+  },
+  "devDependencies": { "concurrently": "^9.1.2" }
+}
