@@ -13,10 +13,20 @@ npm run dev
 
 Открыть http://localhost:3000. API работает на http://localhost:4000.
 
-Альтернатива — Docker Compose:
+Основной запуск через Docker:
 
 ```bash
-docker compose up
+./run-docker.sh
+```
+
+Скрипт сам останавливает старые контейнеры только этого проекта, выбирает свободные порты и выводит
+фактические URL. При свободных портах UI будет доступен на `http://localhost:3000`, API — на
+`http://localhost:4000`.
+
+Остановить проект:
+
+```bash
+docker compose -p ams-task-2-autonomous-system down
 ```
 
 ## Demo
